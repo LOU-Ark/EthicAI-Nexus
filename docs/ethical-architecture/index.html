@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Architecture | EthicAI Nexus</title>
+    <meta name="description" content="AI倫理の理論的枠組みと、技術実装における透明性を追求する論理的な基盤を提示します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .text-theme { color: #2C3E50; }
+        .bg-theme { background-color: #2C3E50; }
+        .border-theme { border-color: #2C3E50; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center gap-4">
+    <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+      <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-white font-black shadow-lg" style="background-color: #2C3E50">
+        E
+      </div>
+      <span class="text-lg sm:text-xl font-black text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">
+        EthicAI Nexus
+      </span>
+    </a>
+    
+    <nav class="hidden md:flex items-center gap-6 overflow-x-auto no-scrollbar">
+      <a href="../ethical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Ethical Architecture
+      </a>
+      <a href="../sensory-synthesis/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Sensory Synthesis
+      </a>
+      <a href="../nexus-case-studies/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Nexus Case Studies
+      </a>
+      <a href="../speculative-pulse/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Speculative Pulse
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:block px-5 py-2.5 bg-slate-900 text-white text-xs font-black rounded-full hover:bg-indigo-600 transition-all shadow-lg shadow-slate-200 whitespace-nowrap">
+        Contact
+      </a>
+      <button class="md:hidden p-2 text-slate-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 p-6 space-y-4 animate-fadeIn">
+    <div class="flex flex-col gap-4">
+      <a href="../ethical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Ethical Architecture
+      </a>
+      <a href="../sensory-synthesis/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Sensory Synthesis
+      </a>
+      <a href="../nexus-case-studies/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Nexus Case Studies
+      </a>
+      <a href="../speculative-pulse/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Speculative Pulse
+      </a>
+      <a href="#" class="block w-full text-center px-5 py-3 bg-slate-900 text-white text-xs font-black rounded-xl">
+        Contact
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="pt-32 pb-20">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+        <div class="relative overflow-hidden rounded-[3rem] bg-slate-900 p-8 md:p-20 flex flex-col items-center text-center">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/20 blur-[100px] -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-slate-500/20 blur-[100px] -ml-32 -mb-32"></div>
+            
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-white/10 text-indigo-300 rounded-full border border-white/10 backdrop-blur-sm">
+                Logical Foundation
+            </span>
+            <h1 class="text-4xl md:text-7xl font-black text-white mb-8 tracking-tight leading-tight">
+                Ethical <br class="hidden md:block"/> Architecture
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
+                AI倫理の理論的枠組みと、技術実装における透明性を追求する。<br class="hidden md:block"/> 
+                論理的な基盤こそが、人間とAIの信頼を構築する唯一の道です。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#logic" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-2xl hover:scale-105 transition-transform">
+                    論理体系を見る
+                </a>
+                <a href="#transparency" class="px-8 py-4 bg-slate-800 text-white font-bold rounded-2xl border border-white/10 hover:bg-slate-700 transition-all">
+                    透明性の技術
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section id="logic" class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-black mb-6 text-slate-800 leading-tight">
+                    信頼をコードで記述する、<br/>
+                    新しい設計思想。
+                </h2>
+                <p class="text-slate-600 leading-relaxed mb-8 text-lg">
+                    私たちの「Ethical Architecture」は、単なる概念に留まりません。それはアルゴリズムの選定からデータのバイアス除去、出力の検証プロセスに至るまで、すべてのエンジニアリング工程に組み込まれる論理的な規範です。
+                </p>
+                <div class="space-y-6">
+                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                        <div class="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center bg-indigo-50 text-indigo-600">
+                            <i class="fa-solid fa-scale-balanced text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-1">説明責任の明確化</h4>
+                            <p class="text-sm text-slate-500">決定プロセスの各ステップを記録し、因果関係を追跡可能にします。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                        <div class="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center bg-emerald-50 text-emerald-600">
+                            <i class="fa-solid fa-shield-halved text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-1">公平性の定量的評価</h4>
+                            <p class="text-sm text-slate-500">多様な属性に対するバイアスを数学的に検出し、補正します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-square bg-slate-200 rounded-[3rem] overflow-hidden shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-transparent"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <!-- Abstract Graphic -->
+                        <div class="w-64 h-64 border-4 border-slate-800/20 rounded-full animate-pulse"></div>
+                        <div class="absolute w-48 h-48 border-4 border-slate-800/40 rounded-full"></div>
+                        <div class="absolute w-32 h-32 bg-slate-800 rounded-3xl rotate-45 group-hover:rotate-90 transition-transform duration-1000"></div>
+                        <i class="fa-solid fa-brain absolute text-white text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Feature -->
+    <section id="transparency" class="bg-white py-24 mb-32 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 text-slate-900">Transparency Stack</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">技術実装における透明性を担保するための3つのレイヤー。ブラックボックスを解体し、光を当てます。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-10 rounded-[2rem] bg-slate-50 border border-transparent hover:border-indigo-200 transition-all hover:shadow-xl">
+                    <div class="mb-6 text-slate-400 font-black text-5xl opacity-20">01</div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800 text-theme">データ・リネージ</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        学習に使用されたデータの起源、クリーニングの履歴、ライセンス情報を完全にドキュメント化し、品質の透明性を確保します。
+                    </p>
+                </div>
+                <div class="p-10 rounded-[2rem] bg-slate-50 border border-transparent hover:border-indigo-200 transition-all hover:shadow-xl">
+                    <div class="mb-6 text-slate-400 font-black text-5xl opacity-20">02</div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800 text-theme">解釈可能モデル</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        モデルが「なぜその結論に至ったのか」を人間が理解できる形で出力する、XAI（説明可能なAI）技術を標準採用しています。
+                    </p>
+                </div>
+                <div class="p-10 rounded-[2rem] bg-slate-50 border border-transparent hover:border-indigo-200 transition-all hover:shadow-xl">
+                    <div class="mb-6 text-slate-400 font-black text-5xl opacity-20">03</div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800 text-theme">リアルタイム監視</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        稼働中のAI挙動を24時間監視し、倫理的逸脱や精度の低下を検知した瞬間に自動でアラートと介入を行います。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Callout -->
+    <section class="max-w-7xl mx-auto px-6 mb-32 text-center">
+        <div class="bg-[#2C3E50] rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-8">
+                    倫理を、可能性へ変える。
+                </h2>
+                <p class="text-slate-300 max-w-2xl mx-auto mb-10 text-lg">
+                    私たちは、倫理を「制約」ではなく「基盤」と捉えています。<br class="hidden md:block"/>
+                    正しい設計の上にこそ、真に個人のQuality of Lifeを最大化する<br class="hidden md:block"/>
+                    クリエイティブな未来が構築されるのです。
+                </p>
+                <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 rounded-full border border-white/20 text-white font-bold backdrop-blur-md">
+                    <span class="w-3 h-3 bg-emerald-400 rounded-full animate-ping"></span>
+                    Designing for Better QOL
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link Area -->
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mt-20 pt-10 border-t border-slate-100">
+        <h3 class="text-xl font-black mb-8 text-slate-800 flex items-center gap-3">
+          <i class="fa-solid fa-compass text-indigo-500"></i> Browse Content
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <a href="../index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+              <span class="font-bold text-slate-700 group-hover:text-indigo-600 text-sm sm:text-base">ホームに戻る</span>
+              <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <!-- Sub link example -->
+            <a href="../sensory-synthesis/index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                <span class="font-bold text-slate-700 group-hover:text-indigo-600 text-sm sm:text-base">Sensory Synthesisへ</span>
+                <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-16 sm:py-20 px-6 mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-white/10 pb-12 mb-12">
+    <div>
+      <h4 class="text-2xl font-black mb-6">EthicAI Nexus</h4>
+      <p class="text-slate-400 leading-relaxed max-w-md font-medium text-sm sm:text-base">倫理と透明性を基盤に、データとAIで個人のQuality of Lifeと可能性を最大化し、より豊かな未来をデザインする。</p>
+    </div>
+    <div class="flex flex-col md:items-end justify-center">
+       <div class="flex gap-4 mb-6">
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+       </div>
+       <p class="text-slate-500 text-xs sm:text-sm font-bold text-center md:text-right">© 2024 EthicAI Nexus.<br class="sm:hidden"/> Generated by MySiteGen-Agent.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Simple fade-in animation for elements as they enter viewport
+    const observerOptions = {
+        threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
