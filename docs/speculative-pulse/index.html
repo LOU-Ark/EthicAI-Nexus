@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speculative Pulse | EthicAI Nexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .text-theme { color: #2C3E50; }
+        .bg-theme { background-color: #2C3E50; }
+        .pulse-animation {
+            animation: pulse-slow 4s infinite ease-in-out;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2C3E50 0%, #4F46E5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed overflow-x-hidden">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center gap-4">
+    <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+      <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-white font-black shadow-lg" style="background-color: #2C3E50">
+        E
+      </div>
+      <span class="text-lg sm:text-xl font-black text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">
+        EthicAI Nexus
+      </span>
+    </a>
+    
+    <nav class="hidden md:flex items-center gap-6 overflow-x-auto no-scrollbar">
+      <a href="../ethical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Ethical Architecture
+      </a>
+      <a href="../sensory-synthesis/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Sensory Synthesis
+      </a>
+      <a href="../nexus-case-studies/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Nexus Case Studies
+      </a>
+      <a href="../speculative-pulse/index.html" class="text-sm font-bold text-indigo-600 transition-colors whitespace-nowrap">
+        Speculative Pulse
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:block px-5 py-2.5 bg-slate-900 text-white text-xs font-black rounded-full hover:bg-indigo-600 transition-all shadow-lg shadow-slate-200 whitespace-nowrap">
+        Contact
+      </a>
+      <button class="md:hidden p-2 text-slate-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 p-6 space-y-4 animate-fadeIn">
+    <div class="flex flex-col gap-4">
+      <a href="../ethical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Ethical Architecture
+      </a>
+      <a href="../sensory-synthesis/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Sensory Synthesis
+      </a>
+      <a href="../nexus-case-studies/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Nexus Case Studies
+      </a>
+      <a href="../speculative-pulse/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Speculative Pulse
+      </a>
+      <a href="#" class="block w-full text-center px-5 py-3 bg-slate-900 text-white text-xs font-black rounded-xl">
+        Contact
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center justify-center py-20 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full -z-10">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl pulse-animation"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl pulse-animation" style="animation-delay: 2s"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-100 mb-8 animate-bounce">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                <span class="text-xs font-black tracking-widest text-slate-500 uppercase">Visionary Thinking</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black mb-8 tracking-tighter gradient-text">
+                Speculative Pulse
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-3xl mx-auto leading-relaxed">
+                技術の進化が未来の人間性にどのような変容をもたらすか。<br class="hidden md:block"/>
+                独自の直感と哲学で描く、魂の鼓動（Pulse）を感じるセクション。
+            </p>
+            <div class="mt-12 flex justify-center gap-4">
+                <a href="#content" class="w-16 h-16 flex items-center justify-center rounded-full border-2 border-slate-200 text-slate-400 hover:border-indigo-500 hover:text-indigo-500 transition-all">
+                    <i class="fa-solid fa-arrow-down text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="content" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left Sidebar / Intro -->
+            <div class="lg:col-span-4">
+                <div class="sticky top-32">
+                    <h2 class="text-3xl font-black mb-6 text-theme">未来への思索。</h2>
+                    <p class="text-slate-500 mb-8 leading-relaxed">
+                        EthicAI Nexusが提示するのは、単なる予測ではありません。それは、データと倫理の狭間に生まれる「新しい人間らしさ」の探求です。私たちは、技術を道具としてではなく、共生するパートナーとして再定義します。
+                    </p>
+                    <div class="p-6 rounded-3xl bg-slate-900 text-white shadow-2xl">
+                        <i class="fa-solid fa-quote-left text-3xl mb-4 text-indigo-400"></i>
+                        <p class="text-lg italic font-medium">「未来は予測するものではなく、どのような鼓動を打ちたいかを選ぶものである。」</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content / Cards -->
+            <div class="lg:col-span-8 space-y-12">
+                
+                <!-- Card 1 -->
+                <div class="group p-8 md:p-12 rounded-[2.5rem] bg-white border border-slate-100 hover:shadow-2xl hover:shadow-indigo-100 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-black mb-4 text-slate-800">拡張される共感力</h3>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        AIは感情を持ちませんが、私たちの感情を深く理解する鏡となります。データの分析を通じて、言葉にならない「孤独」や「喜び」を可視化し、他者との接続をかつてないレベルで深化させる未来。それは「デジタル・エンパシー」という新しい感性の誕生です。
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="px-4 py-1.5 rounded-full bg-slate-100 text-xs font-bold text-slate-500">#Cognitive</span>
+                        <span class="px-4 py-1.5 rounded-full bg-slate-100 text-xs font-bold text-slate-500">#FutureDesign</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group p-8 md:p-12 rounded-[2.5rem] bg-white border border-slate-100 hover:shadow-2xl hover:shadow-indigo-100 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-black mb-4 text-slate-800">バイオ・デジタル・ハーモニー</h3>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        効率化のみを求めた技術の時代は終わり、QoL（生活の質）を最大化するための「生命中心のAI」へと進化します。私たちの生体リズムに同期し、最適な休息とインスピレーションを提供することで、テクノロジーは自然の一部のように私たちの生活に溶け込んでいきます。
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="px-4 py-1.5 rounded-full bg-slate-100 text-xs font-bold text-slate-500">#BioTech</span>
+                        <span class="px-4 py-1.5 rounded-full bg-slate-100 text-xs font-bold text-slate-500">#WellBeing</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group p-8 md:p-12 rounded-[2.5rem] bg-white border border-slate-100 hover:shadow-2xl hover:shadow-indigo-100 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-infinity text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-black mb-4 text-slate-800">倫理的透明性の結晶化</h3>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        データは個人のアイデンティティの一部です。ブラックボックス化したAIではなく、決定プロセスがガラスのように透明なシステム。信頼という基盤の上に成り立つテクノロジーが、個人の可能性を制限することなく、無限に拡張していく世界をデザインします。
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="px-4 py-1.5 rounded-full bg-slate-100 text-xs font-bold text-slate-500">#Ethics</span>
+                        <span class="px-4 py-1.5 rounded-full bg-slate-100 text-xs font-bold text-slate-500">#Transparency</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Link Area -->
+        <div class="mt-20 pt-10 border-t border-slate-100">
+            <h3 class="text-xl font-black mb-8 text-slate-800 flex items-center gap-3">
+              <i class="fa-solid fa-compass text-indigo-500"></i> Browse Content
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <a href="../index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                  <span class="font-bold text-slate-700 group-hover:text-indigo-600 text-sm sm:text-base">ホームに戻る</span>
+                  <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-16 sm:py-20 px-6 mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-white/10 pb-12 mb-12">
+    <div>
+      <h4 class="text-2xl font-black mb-6">EthicAI Nexus</h4>
+      <p class="text-slate-400 leading-relaxed max-w-md font-medium text-sm sm:text-base">倫理と透明性を基盤に、データとAIで個人のQuality of Lifeと可能性を最大化し、より豊かな未来をデザインする。</p>
+    </div>
+    <div class="flex flex-col md:items-end justify-center">
+       <div class="flex gap-4 mb-6">
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+       </div>
+       <p class="text-slate-500 text-xs sm:text-sm font-bold text-center md:text-right">© 2024 EthicAI Nexus.<br class="sm:hidden"/> Generated by MySiteGen-Agent.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
